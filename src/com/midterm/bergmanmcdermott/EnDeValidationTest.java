@@ -7,13 +7,19 @@ import org.junit.Test;
 public class EnDeValidationTest {
 
 	@Test
-	public void test1() {
+	public void testEncryptOption() {
 		assertEquals(Validation.encryDecry("e"), "encry");
 	}
-	
+
 	@Test
-	public void test3() {
+	public void testDecryptOption() {
 		assertEquals(Validation.encryDecry("d"), "decry");
 	}
+
+	@Test
+	public void testInvalidInput() {
+		assertEquals(Validation.encryDecry("a"), null);
+	}
 	
+
 }
